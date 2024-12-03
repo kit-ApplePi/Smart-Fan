@@ -4,7 +4,7 @@ import mediapipe as mp
 import cv2
 import time
 
-# Initializing mediapipe holistic
+# Initialize mediapipe holistic
 mp_holistic = mp.solutions.holistic
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -12,15 +12,15 @@ mp_drawing_styles = mp.solutions.drawing_styles
 # Initialize Picamera2
 picam2 = Picamera2()
 
-# Camera configuration with consistent resolution
-camera_config = picam2.create_preview_configuration(main={"size": (640, 480), "format": "RGB888"})
+# Configure the camera for 1640x1232 resolution
+camera_config = picam2.create_preview_configuration(main={"size": (1640, 1232), "format": "RGB888"})
 picam2.configure(camera_config)
 
 # Start the camera
 picam2.start()
 
 # Video output settings
-output_resolution = (640, 480)  # Ensure consistency in resolution
+output_resolution = (1640, 1232)  # Match the camera resolution
 fourcc = cv2.VideoWriter_fourcc(*'DIVX')
 out = cv2.VideoWriter('./holistic_result.avi', fourcc, 30, output_resolution)
 
@@ -32,7 +32,7 @@ with mp_holistic.Holistic(
     try:
         while True:
             # Capture a frame from the camera
-            frame = picam2.capture_array()
+            frame = picam2.capture_array()  # This is in RGB format
 
             # Convert the RGB frame to BGR for OpenCV compatibility
             image = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
@@ -68,7 +68,7 @@ with mp_holistic.Holistic(
             fps_str = "FPS : %0.1f" % fps
 
             # Display FPS on the image
-            cv2.putText(annotated_image, fps_str, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(annotated_image, fps_str, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
             # Write the frame to the output video
             out.write(annotated_image)
