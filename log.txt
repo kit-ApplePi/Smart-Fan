@@ -1,0 +1,8 @@
+$ python PiCamera_to_OpenCV.py 
+[0:31:48.636950563] [8673]  INFO Camera camera_manager.cpp:316 libcamera v0.3.1+50-69a894c4
+[0:31:48.666089128] [8686]  WARN RPiSdn sdn.cpp:40 Using legacy SDN tuning - please consider moving SDN inside rpi.denoise
+[0:31:48.668789307] [8686]  WARN RPI vc4.cpp:393 Mismatch between Unicam and CamHelper for embedded data usage!
+[0:31:48.669437190] [8686]  INFO RPI vc4.cpp:447 Registered camera /base/soc/i2c0mux/i2c@1/imx219@10 to Unicam device /dev/media3 and ISP device /dev/media1
+[0:31:48.669505893] [8686]  INFO RPI pipeline_base.cpp:1125 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:31:48.678604976] [8673]  INFO Camera camera.cpp:1191 configuring streams: (0) 640x480-XBGR8888 (1) 640x480-SBGGR10_CSI2P
+[0:31:48.679321303] [8686]  INFO RPI vc4.cpp:622 Sensor: /base/soc/i2c0mux/i2c@1/imx219@10 - Selected sensor format: 640x480-SBGGR10_1X10 - Selected unicam format: 640x480-pBAA
