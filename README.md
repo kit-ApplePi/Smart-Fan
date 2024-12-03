@@ -1,6 +1,8 @@
 # Smart-Fan
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6e9c6aea-2022-4481-916c-0083d1066ad0">
+  <img src="Docs/README/System_Structure.png">
+  <img src="Docs/README/Used_Tools.png">
 </p>
 
 <br>
