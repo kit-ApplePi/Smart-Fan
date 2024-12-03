@@ -7,7 +7,7 @@
 
 | No |    Date    |       Topic       |    Link    |
 |----|------------|-------------------|------------|
-| 01 | 2024-11-19 |     제안 발표     | [PDF](Docs/presentations/오픈소스프로젝트%20MonoBehaviour팀%20제안%20발표.pdf) |
+| 01 | 2024-11-19 |     제안 발표     | [PDF](Docs/presentations/임베디드시스템_TEAM_ApplePi_제안발표.pdf) |
 | 02 | 2024-12-16 |     최종 발표     | [PDF] |
 
 <br>
