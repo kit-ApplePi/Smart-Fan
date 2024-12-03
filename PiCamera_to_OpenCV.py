@@ -4,9 +4,9 @@ import cv2
 # Initialize Picamera2
 picam2 = Picamera2()
 
-# Configure the camera with a default preview resolution
-camera_config = picam2.create_preview_configuration(main={"size": (1640, 1232), "format": "RGB888"})
-picam2.configure(camera_config)
+# # Configure the camera with a default preview resolution
+# camera_config = picam2.create_preview_configuration(main={"size": (2592, 1944), "format": "XRGB8888"})
+# picam2.configure(camera_config)
 
 # Start the camera
 picam2.start()
