@@ -12,7 +12,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 # Initialize Picamera2
 picam2 = Picamera2()
 
-# Camera configuration
+# Camera configuration with consistent resolution
 camera_config = picam2.create_preview_configuration(main={"size": (640, 480), "format": "RGB888"})
 picam2.configure(camera_config)
 
@@ -20,8 +20,9 @@ picam2.configure(camera_config)
 picam2.start()
 
 # Video output settings
+output_resolution = (640, 480)  # Ensure consistency in resolution
 fourcc = cv2.VideoWriter_fourcc(*'DIVX')
-out = cv2.VideoWriter('./holistic_result.avi', fourcc, 30, (640, 480))  # Ensure FPS matches your desired rate
+out = cv2.VideoWriter('./holistic_result.avi', fourcc, 30, output_resolution)
 
 prev_time = 0
 
@@ -33,7 +34,7 @@ with mp_holistic.Holistic(
             # Capture a frame from the camera
             frame = picam2.capture_array()
 
-            # Convert the RGB frame to a format compatible with OpenCV
+            # Convert the RGB frame to BGR for OpenCV compatibility
             image = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
 
             # Process the frame with MediaPipe Holistic
