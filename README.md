@@ -1,5 +1,7 @@
 # Smart-Fan
-`2024-2 kit 임베디드시스템 4조 - 스마트 선풍기`
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6e9c6aea-2022-4481-916c-0083d1066ad0">
+</p>
 
 <br>
 
