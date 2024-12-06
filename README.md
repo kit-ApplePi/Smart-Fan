@@ -7,7 +7,7 @@
 
 <br>
 
-## Documents
+## 📄 Documents
 
 | No |    Date    |       Topic       |    Link    |
 |----|------------|-------------------|------------|
@@ -16,7 +16,7 @@
 
 <br>
 
-## Contributors
+## 👨‍💻 Contributors
 <table>
   <td align="center">
     <a href="https://github.com/seongjxn">
