@@ -1,4 +1,7 @@
 # Smart-Fan
+> 다가올 여름, 아름다운 미래 · 밝은 내일이 기다리고 있다.
+
+## 💡 Idea introduction
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6e9c6aea-2022-4481-916c-0083d1066ad0">
   <img src="Docs/README/System_Structure.png">
