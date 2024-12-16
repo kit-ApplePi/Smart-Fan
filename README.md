@@ -4,8 +4,8 @@
 ## 💡 Idea introduction
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6e9c6aea-2022-4481-916c-0083d1066ad0">
-  <img src="Docs/README/System_Structure.png">
-  <img src="Docs/README/Used_Tools.png">
+  <img src="Docs/imgs/System_Structure.png">
+  <img src="Docs/imgs/Used_Tools.png">
 </p>
 
 <br>
@@ -15,7 +15,7 @@
 | No |    Date    |       Topic       |    Link    |
 |----|------------|-------------------|------------|
 | 01 | 2024-11-19 |     제안 발표     | [PDF](Docs/presentations/임베디드시스템_TEAM_ApplePi_제안발표.pdf) |
-| 02 | 2024-12-16 |     최종 발표     | [PDF] |
+| 02 | 2024-12-16 |     최종 발표     | [PDF](Docs/presentations/임베디드시스템%204조%20최종%20발표.pdf) |
 
 <br>
 
