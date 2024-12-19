@@ -2,12 +2,17 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Smart%20Fan&fontSize=50&fontAlignY=42&customColorList=12">
 </p>
 
+> 다가올 여름, <a href="https://namu.wiki/w/%EB%A1%9C%EC%BC%93%EB%8B%A8%20%EC%82%BC%EC%9D%B8%EB%B0%A9/%EB%93%B1%EC%9E%A5%20%EB%8C%80%EC%82%AC">우리에겐 아름다운 미래 · 밝은 내일이 기다리고 있다-</a>
+
+
+<br>
+
 
 ## 🧭 Navigation
 1. [💡 Idea introduction](#-idea-introduction)
-2. [⚙️ System architecture](#system-architecture)
+2. [⚙️ System architecture](#-system-architecture)
 3. [🔒 Implementation of constraints](#-implementation-of-constraints)
-4. [📽️ Demo](#demo)
+4. [📽️ Demo](#-demo)
 5. [📄 Documents](#-documents)
 6. [👨‍💻 Contributors](#-contributors)
 
@@ -20,13 +25,13 @@
   <img src="https://github.com/user-attachments/assets/6e9c6aea-2022-4481-916c-0083d1066ad0">
 </p>
 
-> 다가올 여름, <a href="https://namu.wiki/w/%EB%A1%9C%EC%BC%93%EB%8B%A8%20%EC%82%BC%EC%9D%B8%EB%B0%A9/%EB%93%B1%EC%9E%A5%20%EB%8C%80%EC%82%AC">우리에겐 아름다운 미래 · 밝은 내일이 기다리고 있다-</a>
+> "다가올 여름, <a href="https://namu.wiki/w/%EB%A1%9C%EC%BC%93%EB%8B%A8%20%EC%82%BC%EC%9D%B8%EB%B0%A9/%EB%93%B1%EC%9E%A5%20%EB%8C%80%EC%82%AC">우리에겐 아름다운 미래 · 밝은 내일이 기다리고 있다-</a>"
 
 
 <br>
 
 
-## ⚙️ System architecture
+## ⚙ System architecture
 <p align="center">
   <img src="Docs/imgs/System_Structure.png">
 </p>
@@ -50,7 +55,7 @@
 <br>
 
 
-## 📽️ Demo
+## 📽 Demo
 <p align="center">
   <img src="Docs/videos/real_demo.gif" width="80%">
 </p>
