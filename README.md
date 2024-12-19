@@ -1,5 +1,5 @@
 # Smart-Fan
-> 다가올 여름, 아름다운 미래 · 밝은 내일이 기다리고 있다.
+> 다가올 여름, <a href="https://namu.wiki/w/%EB%A1%9C%EC%BC%93%EB%8B%A8%20%EC%82%BC%EC%9D%B8%EB%B0%A9/%EB%93%B1%EC%9E%A5%20%EB%8C%80%EC%82%AC">우리에겐 아름다운 미래 · 밝은 내일이 기다리고 있다-</a>
 
 ## 💡 Idea introduction
 <p align="center">
@@ -7,6 +7,15 @@
   <img src="Docs/imgs/System_Structure.png">
   <img src="Docs/imgs/Used_Tools.png">
 </p>
+
+<br>
+
+## 📽️ Demo
+<p align="center">
+  <img src="Docs/videos/real_demo.gif" width="80%">
+</p>
+
+> 편리하다는 것, 그것은 신경 쓰지 않아도 된다는 것.
 
 <br>
 
