@@ -49,7 +49,39 @@
 
 
 ## 🔒 Implementation of constraints
+`rotateControl.c`
+```c
+...
+// 메시지 수신 (문자열 형식)
+if (mq_receive(mq, angle_str, sizeof(angle_str), NULL) == -1) {
+    perror("[rotateControl] mq_receive 실패");
+    sleep(1);
+    continue;
+}
 
+...
+```
+> - 각 기능별로 프로세스를 분리하여 멀티프로세스로 구현.
+> - 공유 메모리를 활용해 프로세스 간 데이터 교환이 가능하도록 구현.
+> - Mutex를 활용하여 데이터 교환 시 deadlock을 방지할 수 있도록 구현.
+
+<br>
+
+`detectHuman.py`
+```python
+...
+
+try:
+    mq.send(f"{angle:3.2f}")
+    print(f"[detectHuman] 전송된 각도: {angle:.2f}도")
+except posix_ipc.BusyError:
+    print("[detectHuman] 메시지 큐 가득 참: 전송 실패")
+
+...
+```
+
+> - 사용자가 위치한 방향으로 선풍기가 회전하도록 만들기 위해 OpenCV 및 Google의 MediaPipe 사용.
+> - Python 코드와의 연동을 위해 Message Queue 사용.
 
 
 <br>
