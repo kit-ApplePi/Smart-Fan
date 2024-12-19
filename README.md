@@ -5,11 +5,11 @@
 
 ## 🧭 Navigation
 1. [💡 Idea introduction](#-idea-introduction)
-2. [⚙️ System architecture](system-architecture)
+2. [⚙️ System architecture](#system-architecture)
 3. [🔒 Implementation of constraints](#-implementation-of-constraints)
-4. [📽️ Demo](demo)
+4. [📽️ Demo](#demo)
 5. [📄 Documents](#-documents)
-6. [👨‍💻 Contributors](#contributors)
+6. [👨‍💻 Contributors](#-contributors)
 
 
 <br>
