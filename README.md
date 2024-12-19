@@ -9,12 +9,13 @@
 
 
 ## 🧭 Navigation
-1. [💡 Idea introduction](#-idea-introduction)
-2. [⚙️ System architecture](#-system-architecture)
-3. [🔒 Implementation of constraints](#-implementation-of-constraints)
-4. [📽️ Demo](#-demo)
-5. [📄 Documents](#-documents)
-6. [👨‍💻 Contributors](#-contributors)
+1. <b>[💡 Idea introduction](#-idea-introduction)</b>
+2. <b>[⚙️ System architecture](#-system-architecture)</b>
+3. <b>[🔒 Implementation of constraints](#-implementation-of-constraints)</b>
+4. <b>[🛠 Hardware Manufacturing Process](#-hardware-manufacturing-process)</b>
+5. <b>[📽️ Demo](#-demo)</b>
+6. <b>[📄 Documents](#-documents)</b>
+7. <b>[👨‍💻 Contributors](#-contributors)</b>
 
 
 <br>
@@ -82,6 +83,18 @@ except posix_ipc.BusyError:
 
 > - 사용자가 위치한 방향으로 선풍기가 회전하도록 만들기 위해 OpenCV 및 Google의 MediaPipe 사용.
 > - Python 코드와의 연동을 위해 Message Queue 사용.
+
+
+<br>
+
+
+## 🛠 Hardware Manufacturing Process
+1. <a href="https://namu.wiki/w/Fusion%20360">Autodesk Fusion 360</a>으로 선풍기 본체 모델링
+> <img src="Docs/imgs/fusion.png" width="30%">
+2. 3D 프린터를 활용하여 선풍기 본체 출력
+> <img src="Docs/imgs/program.png" width="70%">
+3. 본체 완성
+> <img src="Docs/imgs/fan.jpg" width="30%">
 
 
 <br>
