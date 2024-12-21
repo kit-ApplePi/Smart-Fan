@@ -53,7 +53,7 @@
 `main.c`
 ```c
 ...
-// 공유 메모리 생성
+    // 공유 메모리 생성
     int shmid = shmget(SHM_KEY, sizeof(SensorData), IPC_CREAT | 0666);
     if (shmid < 0) {
         perror("shmget failed");
@@ -70,6 +70,40 @@
     // 뮤텍스 초기화
     if (pthread_mutex_init(&data->mutex, NULL) != 0) {
         perror("pthread_mutex_init failed");
+        exit(1);
+    }
+...
+```
+```c
+...
+    // manualControl 실행
+    printf("[main] Running manualControl...\n");
+    if (fork() == 0) {
+        execlp("./manualControl", "manualControl", NULL);
+        perror("[main] exec manualControl failed");
+        exit(1);
+    }
+    // getHumiTemp 실행
+    printf("[main] Running getHumiTemp...\n");
+    if (fork() == 0) {
+        execlp("./getHumiTemp", "getHumiTemp", NULL);
+        perror("[main] exec getHumiTemp failed");
+        exit(1);
+    }
+
+    // fanControl 실행
+    printf("[main] Running fanControl...\n");
+    if (fork() == 0) { // 자식 프로세스 생성
+        execlp("./fanControl", "fanControl", NULL);
+        perror("[main] exec fanControl failed");
+        exit(1);
+    }
+
+    // rotateControl 실행
+    printf("[main] Running rotateControl...\n");
+    if (fork() == 0) {
+        execlp("./rotateControl", "rotateControl", NULL);
+        perror("[main] exec rotateControl failed");
         exit(1);
     }
 ...
