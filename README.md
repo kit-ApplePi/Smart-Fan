@@ -50,6 +50,36 @@
 
 
 ## 🔒 Implementation of constraints
+`main.c`
+```c
+...
+// 공유 메모리 생성
+    int shmid = shmget(SHM_KEY, sizeof(SensorData), IPC_CREAT | 0666);
+    if (shmid < 0) {
+        perror("shmget failed");
+        exit(1);
+    }
+
+    // 공유 메모리 연결
+    SensorData* data = (SensorData*)shmat(shmid, NULL, 0);
+    if (data == (SensorData*)-1) {
+        perror("shmat failed");
+        exit(1);
+    }
+
+    // 뮤텍스 초기화
+    if (pthread_mutex_init(&data->mutex, NULL) != 0) {
+        perror("pthread_mutex_init failed");
+        exit(1);
+    }
+...
+```
+> - 각 기능별로 프로세스를 분리하여 멀티프로세스로 구현.
+> - 공유 메모리를 활용해 프로세스 간 데이터 교환이 가능하도록 구현.
+> - Mutex를 활용하여 데이터 교환 시 deadlock을 방지할 수 있도록 구현.
+
+<br>
+
 `rotateControl.c`
 ```c
 ...
@@ -62,11 +92,6 @@ if (mq_receive(mq, angle_str, sizeof(angle_str), NULL) == -1) {
 
 ...
 ```
-> - 각 기능별로 프로세스를 분리하여 멀티프로세스로 구현.
-> - 공유 메모리를 활용해 프로세스 간 데이터 교환이 가능하도록 구현.
-> - Mutex를 활용하여 데이터 교환 시 deadlock을 방지할 수 있도록 구현.
-
-<br>
 
 `detectHuman.py`
 ```python
