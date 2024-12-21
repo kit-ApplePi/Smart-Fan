@@ -76,6 +76,7 @@ int main(void) {
         if (shmData->power == 0) {
             pthread_mutex_unlock(&shmData->mutex);
             // printf("Power off. Waiting...\n");
+            rotate_Servo(0); 
             sleep(1);
 
             continue;
@@ -96,34 +97,21 @@ int main(void) {
         // 수신된 각도 변화값을 float로 변환
         deltaAngle = atof(angle_str);
 
-        // 목표 각도 업데이트
-        float targetAngle = prevAngle - deltaAngle;
+        // 수신된 각도 변화 출력
+        printf("[rotateControl] 수신된 변화: %.2f도\n", deltaAngle);
+
+        // 이전 각도 업데이트 (변화 누적)
+        prevAngle -= deltaAngle;
 
         // 각도 제한 (서보 모터 안전 범위)
-        if (targetAngle < -90.0) targetAngle = -90.0;
-        if (targetAngle > 90.0) targetAngle = 90.0;
+        if (prevAngle < -90.0) prevAngle = -90.0;
+        if (prevAngle > 90.0) prevAngle = 90.0;
 
-        // 각도 이동 루프 (1도씩 변화)
-        while (fabs(prevAngle - targetAngle) >= 1.0) {
-            if (prevAngle < targetAngle) {
-                prevAngle += 1.0;  // 시계 방향 회전
-            } else if (prevAngle > targetAngle) {
-                prevAngle -= 1.0;  // 반시계 방향 회전
-            }
+        // 누적 각도 출력
+        printf("[rotateControl] 누적 각도: %.2f도\n", prevAngle);
 
-            // 누적 각도 출력
-            printf("[rotateControl] 현재 회전 각도: %.2f도\n", prevAngle);
-
-            // 서보 회전 수행
-            rotate_Servo(prevAngle);
-
-            // 약간의 대기 (속도 조절)
-            delay(10);  // 20ms 대기
-        }
-
-        // 목표 각도 출력
-        printf("[rotateControl] 최종 각도: %.2f도\n", targetAngle);
-
+        // 서보 회전 수행
+        rotate_Servo(prevAngle);
         // delay(100);  // 0.1초 대기
     }
 
